@@ -11,7 +11,8 @@
 		<CI_BUILD_REVISION Condition=" '$(CI_BUILD_REVISION)' == '' AND '$(APPVEYOR)' != 'True' ">0</CI_BUILD_REVISION>
 		<CI_BUILD_REVISION Condition =" '$(CI_BUILD_REVISION)' == ''">0</CI_BUILD_REVISION>
 
-		<CI_PROJECT_NAME Condition="'$(APPVEYOR)' == 'True' ">$(APPVEYOR_PROJECT_NAME)</CI_PROJECT_NAME>
+		<!-- This is commented out because I need to override the output filename -->
+		<!--<CI_PROJECT_NAME Condition="'$(APPVEYOR)' == 'True' ">$(APPVEYOR_PROJECT_NAME)</CI_PROJECT_NAME>-->
 		<CI_PROJECT_NAME Condition=" '$(CI_PROJECT_NAME)' == '' ">repository.camalot</CI_PROJECT_NAME>
 		<CI_PROJECT_FRIENDLY_NAME Condition=" '$(CI_PROJECT_FRIENDLY_NAME)' == '' ">repository.camalot</CI_PROJECT_FRIENDLY_NAME>
 		<CI_ARTIFACT_PATH Condition=" '$(CI_ARTIFACT_PATH)' == '' ">$(MSBuildProjectDirectory)\..\bin\</CI_ARTIFACT_PATH>
@@ -27,7 +28,7 @@
 		<CI_BUILD_CONDITION Condition=" '$(CI)' == 'True' AND '$(APPVEYOR_REPO_TAG)' == 'True' ">Tag</CI_BUILD_CONDITION>
 		<CI_BUILD_CONDITION Condition=" '$(CI)' == 'True' AND '$(APPVEYOR_PULL_REQUEST_NUMBER)' == 'True' ">PullRequest</CI_BUILD_CONDITION>
 
-		<CI_PROJECT_URL>https://github.com/camalot/repository.camalot/</CI_PROJECT_URL>
+		<CI_PROJECT_URL>https://github.com/camalot/plugin.repository.camalot/</CI_PROJECT_URL>
 
 		<KODI_REPO_URL>https://camalot.github.io/repository.camalot</KODI_REPO_URL>
 
